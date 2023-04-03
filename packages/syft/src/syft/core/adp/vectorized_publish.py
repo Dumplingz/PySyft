@@ -61,6 +61,8 @@ def publish(
         tensor, privacy_budget, is_linear, sigma, private, ledger
     )
 
+    return original_output
+
     raw_rdp_constants = np.array(list(rdp_constants.values()))
 
     if np.any(raw_rdp_constants < 0):
