@@ -452,6 +452,7 @@ class DataSubjectLedger(AbstractDataSubjectLedger):
                 "Please contact the OpenMined support team."
                 "Thank you, and sorry for the inconvenience!"
             )
+        print(type(self))
 
         # get the budget
         print("got user budget", old_user_budget, "epsilon_spent", epsilon_spend)
