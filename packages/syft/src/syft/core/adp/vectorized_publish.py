@@ -50,6 +50,7 @@ def publish(
     is_linear: bool = True,
     private: bool = True,
 ) -> np.ndarray:
+    print("In publish!")
     # root_child = None
     while isinstance(tensor, PassthroughTensor):
         root_child = tensor.child
