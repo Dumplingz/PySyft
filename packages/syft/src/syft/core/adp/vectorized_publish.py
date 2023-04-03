@@ -61,8 +61,6 @@ def publish(
         tensor, privacy_budget, is_linear, sigma, private, ledger
     )
 
-    return original_output
-
     raw_rdp_constants = np.array(list(rdp_constants.values()))
 
     if np.any(raw_rdp_constants < 0):
@@ -139,7 +137,7 @@ def publish(
         [secrets.SystemRandom().gauss(0, sigma) for _ in range(original_output.size)]
     ).reshape(original_output.shape)
 
-    return original_output + noise
+    return original_output
 
 
 # TODO(0.8): this function should be vectorized for jax
